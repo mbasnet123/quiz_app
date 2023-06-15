@@ -13,7 +13,7 @@ class AnswerButton extends StatelessWidget{
     return ElevatedButton(onPressed: onPress,
         style: ElevatedButton.styleFrom(
           // maximumSize: Size(30, 15),
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.deepPurple,
           foregroundColor: Colors.white,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(28))

@@ -5,10 +5,16 @@ class QuizQuestion {
 
   final String text;
   final List<String> answers;
+
+  List<String> getShuffledAnswers(){
+    final shuffledList = List.of(answers);
+    shuffledList.shuffle();
+    return shuffledList;
+  }
 }
 
 List<QuizQuestion> questionsList = [
-  QuizQuestion("Which is the biggest country", [
+  QuizQuestion("Which is the biggest country?", [
     "Russia",
     "China",
     "India",
@@ -57,5 +63,46 @@ List<QuizQuestion> questionsList = [
     "Mississippi"
   ]),
 
+  QuizQuestion("Which is the largest island in the world?", [
+    "Greenland",
+    "Australia",
+    "Borneo",
+    "Madagascar"
+  ]),
+
+  QuizQuestion("Which country is known as the 'Land of Fire and Ice'?", [
+    "Iceland",
+    "New Zealand",
+    "Norway",
+    "Indonesia"
+  ]),
+
+  QuizQuestion("Which lake is the deepest in the world?", [
+    "Lake Baikal",
+    "Lake Superior",
+    "Lake Tanganyika",
+    "Caspian Sea"
+  ]),
+
+  QuizQuestion("Which country is the largest producer of coffee?", [
+    "Brazil",
+    "Colombia",
+    "Vietnam",
+    "Ethiopia"
+  ]),
+
+  QuizQuestion("Which river flows through the Grand Canyon?", [
+    "Colorado River",
+    "Mississippi River",
+    "Amazon River",
+    "Nile River"
+  ]),
+
+  QuizQuestion("Which city is the capital of Australia?", [
+    "Canberra",
+    "Sydney",
+    "Melbourne",
+    "Brisbane"
+  ]),
 ];
 
