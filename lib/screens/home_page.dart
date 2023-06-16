@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage(this.startQuiz,{super.key});
+  const HomePage(this.startQuiz, {super.key});
 
   final void Function() startQuiz;
 
@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
                 opacity: 0.5,
                 child: Image.asset(
                   "assets/images/quiz.jpg",
-                // color: Color.fromARGB(42, 255, 255, 255),
+                  // color: Color.fromARGB(42, 255, 255, 255),
                 ),
               ),
               const SizedBox(

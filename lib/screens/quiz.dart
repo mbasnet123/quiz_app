@@ -34,13 +34,20 @@ class _QuizPageState extends State<QuizPage> {
 
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
-    
-    if(selectedAnswers.length == questionsList.length){
+
+    if (selectedAnswers.length == questionsList.length) {
       setState(() {
         // selectedAnswers = [];
-        activeScreen = 'results-screen';
+        activeScreen = 'results_screen';
       });
     }
+  }
+
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = 'questions_screen';
+    });
   }
 
   @override
@@ -53,9 +60,10 @@ class _QuizPageState extends State<QuizPage> {
       );
     }
 
-    if(activeScreen == "results-screen"){
+    if (activeScreen == "results_screen") {
       screenWidget = ResultScreen(
         chosenAnswers: selectedAnswers,
+        onRestart: restartQuiz,
       );
     }
 
